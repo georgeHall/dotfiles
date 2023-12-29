@@ -30,64 +30,36 @@ else
     echo "$zsh_autosuggestions_dir exists skipping"
 fi
 
-mv $HOME/.zshrc $HOME/.zshrc.bak
-cat <<EOF > $HOME/.zshrc
-export ZSH="\$HOME/.config/oh-my-zsh"
-
-ZSH_THEME="agnoster"
-
-#TMUX
-ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_CONFIG=\$HOME/.config/.tmux.conf
-
-plugins=(
-    git
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    tmux
-)
-
-alias ll='ls -al'
-
-source \$ZSH/oh-my-zsh.sh
-EOF
+rc=".zshrc"
+mv $HOME/$rc $HOME/$rc.bak
+cp $(pwd)/zsh/$rc $HOME/$rc
 echo "Done: Setting Up Oh My Zsh"
 
-echo "Setting TMUX config"
-tmux_conf_file=$HOME/.config/.tmux.conf
-cp $tmux_conf_file $tmux_conf_file.bak || true
-touch $tmux_conf_file
-cat <<EOF > $tmux_conf_file
-# Set Prefix to Ctrl A
-unbind C-b
-set-option -g prefix C-a
-bind-key C-a send-prefix
 
-# Mouse Mode
-set -g mouse on
+echo "START: TMUX"
+tmux_conf=".config/.tmux.conf"
+if [ -f $HOME/$tmux_conf ]; then
+    mv $HOME/$tmux_conf $HOME/$tmux_conf.bak || true
+fi 
+cp $(pwd)/tmux/config $HOME/$tmux_conf
 
-# Index from 1
-set -g base-index 1
-setw -g pane-base-index 1
-
-# Alt Arrow for Pane switching
-bind -n M-h select-pane -L
-bind -n M-l select-pane -R
-bind -n M-k select-pane -U
-bind -n M-j select-pane -D
-EOF
+echo """
+#TMUX
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_CONFIG=\$HOME/$tmux_conf
+""" >> $HOME/.zshrc
+echo "END: TMUX"
 
 mkdir -p $HOME/.ssh
 if [ ! -f $HOME/.ssh/id_rsa ]; then
     ssh-keygen -b 2048 -t rsa -f $HOME/.ssh/id_rsa -q -N ""
-
-    echo """
-    Please add the following key to all ssh targets
-
-    $(cat $HOME/.ssh/id_rsa.pub)
-    ""
 fi
+
+echo """
+Please add the following key to all ssh targets
+
+$(cat $HOME/.ssh/id_rsa.pub)
+"""
 
 git config --global user.email "george_edward_hall@hotmail.co.uk"
 git config --global user.name "George Hall"
-
