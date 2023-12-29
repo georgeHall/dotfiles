@@ -42,6 +42,7 @@ if [ -f $HOME/$tmux_conf ]; then
     mv $HOME/$tmux_conf $HOME/$tmux_conf.bak || true
 fi 
 cp $(pwd)/tmux/config $HOME/$tmux_conf
+dos2unix $HOME/$tmux_conf
 
 echo """
 #TMUX
@@ -63,3 +64,5 @@ $(cat $HOME/.ssh/id_rsa.pub)
 
 git config --global user.email "george_edward_hall@hotmail.co.uk"
 git config --global user.name "George Hall"
+
+dos2unix $HOME/$rc
