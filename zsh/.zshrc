@@ -9,8 +9,5 @@ plugins=(
     tmux
 )
 
-#tmux
-ZSH_TMUX_AUTOSTART=true
-
 alias ll='ls -al'
 source $ZSH/oh-my-zsh.sh
