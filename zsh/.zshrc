@@ -10,4 +10,7 @@ plugins=(
 )
 
 alias ll='ls -al'
+
+export PATH=$PATH:$HOME/.local/bin
+
 source $ZSH/oh-my-zsh.sh

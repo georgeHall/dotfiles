@@ -62,6 +62,7 @@ git config --global user.name "George Hall"
 dos2unix $HOME/$rc
 
 sh $(pwd)/code/install.sh
+sh $(pwd)/python/install.sh
 
 
 echo """
