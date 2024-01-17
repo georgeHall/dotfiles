@@ -56,13 +56,16 @@ if [ ! -f $HOME/.ssh/id_rsa ]; then
     ssh-keygen -b 2048 -t rsa -f $HOME/.ssh/id_rsa -q -N ""
 fi
 
+git config --global user.email "george_edward_hall@hotmail.co.uk"
+git config --global user.name "George Hall"
+
+dos2unix $HOME/$rc
+
+sh $(pwd)/code/install.sh
+
+
 echo """
 Please add the following key to all ssh targets
 
 $(cat $HOME/.ssh/id_rsa.pub)
 """
-
-git config --global user.email "george_edward_hall@hotmail.co.uk"
-git config --global user.name "George Hall"
-
-dos2unix $HOME/$rc

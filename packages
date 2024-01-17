@@ -2,3 +2,7 @@ git
 zsh
 tmux
 fonts-powerline
+dos2unix
+wget 
+gpg
+apt-transport-https
