@@ -1,9 +1,10 @@
 git
+curl
+wget
 zsh
 tmux
 fonts-powerline
-dos2unix
-wget 
+dos2unix 
 gpg
 apt-transport-https
 rpi-imager
