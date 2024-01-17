@@ -6,3 +6,4 @@ dos2unix
 wget 
 gpg
 apt-transport-https
+rpi-imager
