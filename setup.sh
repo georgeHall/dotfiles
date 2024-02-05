@@ -47,7 +47,7 @@ dos2unix $HOME/$tmux_conf
 echo """
 #TMUX
 ZSH_TMUX_AUTOSTART=true
-ZSH_TMUX_CONFIG=\$HOME/$tmux_conf
+ZSH_TMUX_CONFIG=$HOME/$tmux_conf
 """ >> $HOME/$rc
 echo "END: TMUX"
 
