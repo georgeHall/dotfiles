@@ -17,4 +17,3 @@ export PATH=$PATH:/usr/local/go/bin
 export EDITOR=vim
 export VISUAL="$EDITOR"
 
-source $ZSH/oh-my-zsh.sh

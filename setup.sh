@@ -65,6 +65,7 @@ sh $(pwd)/docker/install.sh "$HOME/$rc"
 
 sudo apt autoremove -y
 
+echo "\nsource $ZSH/oh-my-zsh.sh" >> $HOME/$rc
 dos2unix $HOME/$rc
 
 echo """
