@@ -48,7 +48,7 @@ echo """
 #TMUX
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_CONFIG=\$HOME/$tmux_conf
-""" >> $HOME/.zshrc
+""" >> $HOME/$rc
 echo "END: TMUX"
 
 mkdir -p $HOME/.ssh
@@ -59,11 +59,13 @@ fi
 git config --global user.email "george_edward_hall@hotmail.co.uk"
 git config --global user.name "George Hall"
 
-dos2unix $HOME/$rc
-
 sh $(pwd)/code/install.sh
 sh $(pwd)/python/install.sh
+sh $(pwd)/docker/install.sh "$HOME/$rc"
 
+sudo apt autoremove -y
+
+dos2unix $HOME/$rc
 
 echo """
 Please add the following key to all ssh targets
