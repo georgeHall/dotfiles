@@ -3,6 +3,7 @@ curl
 wget
 zsh
 tmux
+vim
 fonts-powerline
 dos2unix 
 gpg
