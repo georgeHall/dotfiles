@@ -63,6 +63,7 @@ sh $(pwd)/code/install.sh
 sh $(pwd)/python/install.sh
 sh $(pwd)/docker/install.sh "$HOME/$rc"
 sh $(pwd)/terraform/install.sh "$HOME/$rc" "$HOME"
+sh $(pwd)/gcloud/install.sh "$HOME/$rc"
 
 sudo apt autoremove -y
 
