@@ -10,4 +10,4 @@ tfswitch --latest-stable 1
 
 
 echo "" >> $1
-echo "export PATH=\$PATH:$2/bin" >> $1
+echo "export PATH=\$PATH:\$HOME/bin" >> $1
