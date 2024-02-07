@@ -61,6 +61,7 @@ git config --global user.name "George Hall"
 
 sh $(pwd)/code/install.sh
 sh $(pwd)/python/install.sh
+sh $(pwd)/minikube/install.sh
 sh $(pwd)/docker/install.sh "$HOME/$rc"
 sh $(pwd)/terraform/install.sh "$HOME/$rc"
 sh $(pwd)/gcloud/install.sh "$HOME/$rc"
