@@ -1,8 +1,9 @@
 #!/usr/bin/env sh
 
-file=minikube-linux-amd54
+file=minikube
+minikube_install_dir="/usr/local/bin/minikube"
 
-if [ ! -f $file ]; then
+if [ ! -f $file ] && [! -f "$minikube_install_dir"]; then
     wget  https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 -O $file
     sudo install $file /usr/local/bin/minikube
 fi

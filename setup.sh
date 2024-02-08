@@ -61,6 +61,7 @@ git config --global user.name "George Hall"
 
 sh $(pwd)/code/install.sh
 sh $(pwd)/python/install.sh
+sh $(pwd)/kubectl/install.sh
 sh $(pwd)/minikube/install.sh
 sh $(pwd)/docker/install.sh "$HOME/$rc"
 sh $(pwd)/terraform/install.sh "$HOME/$rc"
@@ -69,7 +70,8 @@ sh $(pwd)/golang/install.sh "$HOME/$rc"
 
 sudo apt autoremove -y
 
-echo "\nsource $ZSH/oh-my-zsh.sh" >> $HOME/$rc
+echo "" >> $HOME/$rc
+echo "source \$ZSH/oh-my-zsh.sh" >> $HOME/$rc
 dos2unix $HOME/$rc
 
 echo """
