@@ -11,6 +11,7 @@ shell_file=$HOME/.zshrc
 
 sh $(pwd)/oh-my-zsh/install.sh "$shell_file" $config_dir
 
+sh $(pwd)/alias/install.sh "$shell_file"
 sh $(pwd)/git/install.sh
 sh $(pwd)/tmux/install.sh
 sh $(pwd)/code/install.sh
