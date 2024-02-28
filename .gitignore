@@ -1,4 +1,10 @@
 *.tar.gz
 minikube
 kubectl
+
+# helm
 get_helm.sh
+
+# awscli
+awscliv2.zip
+aws/

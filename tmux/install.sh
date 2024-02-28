@@ -8,8 +8,6 @@ fi
 cp $(pwd)/tmux/config $HOME/$tmux_conf
 dos2unix $HOME/$tmux_conf
 
-sudo apt install xsel
-
 echo """
 #TMUX
 ZSH_TMUX_AUTOSTART=true
