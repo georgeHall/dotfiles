@@ -2,6 +2,7 @@ git
 curl
 wget
 zsh
+i3
 tmux
 vim
 fonts-powerline
@@ -9,3 +10,4 @@ dos2unix
 gpg
 apt-transport-https
 rpi-imager
+neovim
