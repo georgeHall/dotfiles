@@ -18,7 +18,7 @@ sh $(pwd)/python/install.sh
 sh $(pwd)/k8s/install.sh
 sh $(pwd)/minikube/install.sh
 sh $(pwd)/awscli/install.sh
-sh $(pwd)/neovim/install.sh
+sh $(pwd)/tmux/install.sh
 sh $(pwd)/docker/install.sh "$shell_file"
 sh $(pwd)/gcloud/install.sh "$shell_file"
 sh $(pwd)/hashicorp/install.sh "$shell_file"
