@@ -13,4 +13,3 @@ echo """
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_CONFIG=$HOME/$tmux_conf
 """ >> $HOME/.zshrc
-

@@ -9,3 +9,5 @@ dos2unix
 gpg
 apt-transport-https
 rpi-imager
+neovim
+python3-neovim
